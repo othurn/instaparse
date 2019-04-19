@@ -24,6 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://instaparse90.herokuapp.com/parse"
             }))
         
+        // if the user has already logged in
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNaviController = main.instantiateViewController(withIdentifier: "FeedNaviController")
+            window?.rootViewController = feedNaviController
+            
+            
+        }
+        
         return true
     }
 

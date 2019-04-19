@@ -8,6 +8,7 @@ target 'instaparse' do
   # Pods for instaparse
   pod "Parse"
   pod "AlamofireImage"
+  pod "MessageInputBar"
 
   target 'instaparseTests' do
     inherit! :search_paths
